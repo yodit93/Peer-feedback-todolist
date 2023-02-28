@@ -9,12 +9,12 @@ const interact = new Interact(todos);
 const todaysTodo = document.querySelector('.todays-todo');
 const addTodo = document.querySelector('.add-todo');
 
-function render() {
+const render = () => {
   todaysTodo.innerHTML = `<h4 class="title">Today's To do</h4>
   <button class="refreshBtn"><img src="${refresh}" alt=""></button>`;
   addTodo.innerHTML = `<input type="text" class="input-todo required" placeholder="Add to your list...">
   <button class="addBtn"><img src="${add}" alt=""></button>`;
-}
+};
 
 render();
 

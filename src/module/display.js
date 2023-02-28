@@ -54,8 +54,8 @@ export default class Interact {
     const idUpdate = e.target.id;
     const input = document.querySelector('.new-input');
     const newValue = input.value;
-    const m = this.lists.find((todo) => Number(todo.index) === Number(idUpdate));
-    m.description = newValue;
+    const list = this.lists.find((todo) => Number(todo.index) === Number(idUpdate));
+    list.description = newValue;
     savedTodos(this.lists);
     this.display();
   };

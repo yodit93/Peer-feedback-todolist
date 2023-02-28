@@ -1,6 +1,6 @@
 import { getTodos, sortList, savedTodos } from './storage.js';
 
-export default function removeTask(idToDelete) {
+const removeTask = (idToDelete) => {
   let todos = getTodos();
   todos = todos.filter((todo) => {
     if (JSON.stringify(todo.index) === idToDelete) {
@@ -11,4 +11,6 @@ export default function removeTask(idToDelete) {
   });
   sortList(todos);
   savedTodos(todos);
-}
+};
+
+export default removeTask;
